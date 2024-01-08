@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculator</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous" />
+	</head>
+	<body>
+		<header>
+			<h1 class="text-center alert alert-primary container mt-2 text-primary">Calculator</h1>
+		</header>
+
+        <main class="container text-center">
+
+            <div>
+                <input type="number" placeholder="Number1" class="form-control mt-2" id="num1"/>
+                <input type="number" placeholder="Number2" class="form-control mt-2"  id="num2"/>
+            </div>
+            
+            <div class="mt-4">
+                <button type="button" class="btn btn-primary" onclick="Add()">+</button>
+                <button type="button" class="btn btn-primary" onclick="Sub()" >-</button>
+                <button type="button" class="btn btn-primary" onclick="Div()">x</button>
+                <button type="button" class="btn btn-primary" onclick="Mult()">/</button>
+            </div>
+            
+            <div id="result" class="alert alert-light mt-4 text-secondary">
+                <h1>Result Here</h1>
+            </div>
+
+        </main>
+            
+        <script>
+            console.log("Hello")
+            function Add() {
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                var z = Number(x) + Number(y);
+                document.getElementById("result").innerHTML = '<h1>' + String(z) + '</h1>';
+                document.getElementById("result").className = "alert alert-success mt-4 text-success";
+            }
+            function Sub() {
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                var z = Number(x) - Number(y);
+                document.getElementById("result").innerHTML = '<h1>' + String(z) + '</h1>';
+                document.getElementById("result").className = "alert alert-success mt-4 text-success";
+            }
+            function Div() {
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                var z = Number(x) * Number(y);
+                document.getElementById("result").innerHTML = '<h1>' + String(z) + '</h1>';
+                document.getElementById("result").className = "alert alert-success mt-4 text-success";
+            }
+            function Mult() {
+                var x = document.getElementById("num1").value;
+                var y = document.getElementById("num2").value;
+                var z = Number(x) / Number(y);
+                document.getElementById("result").innerHTML = '<h1>' + String(z) + '</h1>';
+                document.getElementById("result").className = "alert alert-success mt-4 text-success";
+            }
+
+        </script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"></script>
+	</body>
+</html>
